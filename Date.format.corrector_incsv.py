@@ -14,12 +14,12 @@ def convert_date(date_str):
             return date_str  # Return original value for invalid date
 
 # Read original CSV and update corrected values
-with open('/config/workspace/supermarket_sales-Sheet1.csv', 'r', newline='') as input_file:
+with open('/supermarket_sales-Sheet1.csv', 'r', newline='') as input_file:
     csv_reader = csv.reader(input_file)
     rows = list(csv_reader)  # Read all rows into memory
 
 # Update date values within the same CSV file
-with open('/config/workspace/supermarket_sales-Sheet1.csv', 'w', newline='') as output_file:
+with open('/supermarket_sales-Sheet1.csv', 'w', newline='') as output_file:
     csv_writer = csv.writer(output_file)
 
     for row in rows:
